@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ISBN, navLinks, PUBLISHER_URL } from "@/lib/content";
 
@@ -30,6 +31,20 @@ export default function Footer() {
         <div className="foot-bottom">
           <span>© Sandra Mubanga. All rights reserved.</span>
           <span>Official author website</span>
+        </div>
+
+        <div className="powered">
+          <span className="powered-label">Powered by</span>
+          <a href="https://fortunepublishers.com" target="_blank" rel="noopener" className="powered-logo">
+            <Image
+              src="/images/fortune-publishers-logo.png"
+              alt="Fortune Publishers"
+              width={1019}
+              height={283}
+              sizes="260px"
+              quality={90}
+            />
+          </a>
         </div>
       </div>
     </footer>
